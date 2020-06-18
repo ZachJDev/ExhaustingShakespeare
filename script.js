@@ -1,3 +1,5 @@
+const LINES = sourceLinePairs.length
+
 let button = document.querySelector("button");
 let sonnet = document.querySelector("#sonnet");
 
@@ -18,7 +20,7 @@ function createPoem() {
     return el.tagName === "LI";
   });
   let linePairs = Array.from({ length: 7 }, () =>
-    getRandomInt(sourceLinePairs.length - 1)
+    getRandomInt(LINES - 1)
   ).map((el) => sourceLinePairs[el]);
 
 
@@ -35,6 +37,7 @@ function createPoem() {
           element.title = `Sonnet #${linePair.SonnetNumber}, line ${linePair.lineTwo.number}`
       } else {
         element.textContent = linePairs[6].lineTwo.text;
+        element.title = `Sonnet #${linePairs[6].SonnetNumber}, line ${linePairs[6].lineTwo.number}`
       }
   })
 }
