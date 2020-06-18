@@ -1,3 +1,22 @@
 body {
-    background: green;
+    background-color:rgb(229, 229, 182);
+    font-family: 'Roboto Mono', monospace;
+}
+h1 {
+    margin: 10px 20%;
+}
+ul {
+    list-style: none;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+
+#poem-box {
+    padding: 0 33%;
+}
+
+button {
+    width: 300px;
+    margin: 20px 25%;
+    font-family: 'Roboto Mono', monospace;
 }
