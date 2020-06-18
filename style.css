@@ -9,14 +9,21 @@ ul {
     list-style: none;
     font-size: 1.2rem;
     line-height: 2.2rem;
+    width: 100%;
 }
 
 #poem-box {
-    padding: 0 33%;
+    margin: 0 33%;
 }
 
 button {
     width: 300px;
     margin: 20px 25%;
     font-family: 'Roboto Mono', monospace;
+}
+
+.instructions {
+    color: darkslategrey;
+    font-size: 1rem;
+    margin: 20px 40%;
 }

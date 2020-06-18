@@ -24,9 +24,15 @@ function createPoem() {
 
   sonnetLines.map((element, index) => {
       if(index % 4 < 2 && index !== 13) {
-      element.textContent = linePairs[Math.ceil(index/2)].lineOne.text;
+
+        let linePair = linePairs[Math.ceil(index/2)]
+      element.textContent = linePair.lineOne.text;
+      element.title = `Sonnet #${linePair.SonnetNumber}, line ${linePair.lineOne.number}`
+
       } else if(index % 4 > 1) {
-          element.textContent = linePairs[Math.ceil(index/2) - 1].lineTwo.text;
+          let linePair = linePairs[Math.ceil(index/2) - 1]
+          element.textContent = linePair.lineTwo.text;
+          element.title = `Sonnet #${linePair.SonnetNumber}, line ${linePair.lineTwo.number}`
       } else {
         element.textContent = linePairs[6].lineTwo.text;
       }
