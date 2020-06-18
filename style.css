@@ -27,3 +27,29 @@ button {
     font-size: 1rem;
     margin: 20px 40%;
 }
+
+@media screen and (max-width: 1024px) {
+   #poem-box {
+     width: 100%;
+margin: 0;
+    }
+    .instructions {
+        font-size: .8rem;
+        margin: 20px ;
+    }
+    h1 {
+        margin: 0;
+        font-size: 1rem;
+    }
+    ul {
+        font-size: .8rem;
+        line-height: 1rem;
+        padding-left: 0;
+    }
+    button {
+        margin: 20px 5%;
+    }
+    #where-to-find {
+        font-size: .8rem;
+    }
+  }
