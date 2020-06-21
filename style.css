@@ -1,56 +1,100 @@
+* {
+  margin: 0 0;
+}
 body {
-    background-color:rgb(229, 229, 182);
-    font-family: 'Roboto Mono', monospace;
+  background-color: white;
+  /* font-family: 'Roboto Mono', monospace; */
+  /* font-family: 'Nanum Myeongjo', serif; */
+  /* font-family: 'Cormorant', serif; */
+  font-family: "IM Fell DW Pica", serif;
 }
-h1 {
-    margin: 10px 20%;
+#bound {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-ul {
-    list-style: none;
-    font-size: 1.2rem;
-    line-height: 2.2rem;
-    width: 100%;
+#title {
+    margin-top: 1rem;
 }
 
 #poem-box {
-    margin: 0 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#sonnet {
+  list-style: none;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  width: 100%;
+}
+.line {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.line-count {
+    font-size: .8em;
+    width: 70px;
+    opacity: 0;
+    /* display: none; */
+}
+#sonnet .line:nth-child(7) .line-count, #sonnet .line:nth-child(13) .line-count  {
+    opacity: 100%;
+}
+
+.line-text {
+    flex-grow: 2;
+}
+
+.line-break {
+    margin: .9rem;
+}
+
+.source-info {
+    font-size: .6em;
 }
 
 button {
-    width: 300px;
-    margin: 20px 25%;
-    font-family: 'Roboto Mono', monospace;
+  width: 250px;
+
+  font-family: "IM Fell DW Pica", serif;
+  font-size: 1.4rem;
+
+  border: none;
+  background-color: black;
+  color: white;
+
+  margin-top: 4rem;
+  padding: 13px 10px;
+  border-radius: 0%;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -ms-border-radius: 0%;
+  -o-border-radius: 0%;
 }
 
-.instructions {
-    color: darkslategrey;
-    font-size: 1rem;
-    margin: 20px 40%;
+button:hover {
+  background-color: rgb(68, 68, 68);
 }
+
+#where-to-find {
+    margin-top: 30px;
+    
+}
+
 
 @media screen and (max-width: 1024px) {
-   #poem-box {
-     width: 100%;
-margin: 0;
-    }
-    .instructions {
-        font-size: .8rem;
-        margin: 20px ;
-        display: none;
-    }
-    h1 {
-        margin: 0;
+    #sonnet{
         font-size: 1rem;
+        line-height: 1.4rem;
     }
-    ul {
-        font-size: .8rem;
-        line-height: 1rem;
-        padding-left: 0;
+    .source-info {
+        flex-grow: 2;
     }
-    button {
-        margin: 20px 5%;
+    .line-count {
+        width: 20px;
     }
-    #where-to-find {
-        font-size: .8rem;
-    }
-  }
+}
