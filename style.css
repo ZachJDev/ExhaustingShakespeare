@@ -41,16 +41,16 @@ body {
     opacity: 0;
     /* display: none; */
 }
-#sonnet .line:nth-child(7) .line-count, #sonnet .line:nth-child(13) .line-count  {
+#sonnet .line:nth-child(5) .line-count, #sonnet .line:nth-child(10) .line-count  {
     opacity: 100%;
+}
+
+#sonnet .line:nth-child(1), #sonnet .line:nth-child(5), #sonnet .line:nth-child(9), #sonnet .line:nth-child(13) {
+    margin-top: 1.6rem;
 }
 
 .line-text {
     flex-grow: 2;
-}
-
-.line-break {
-    margin: .9rem;
 }
 
 .source-info {

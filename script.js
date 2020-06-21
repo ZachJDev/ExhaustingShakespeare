@@ -5,14 +5,11 @@ let sonnet = document.querySelector("#sonnet");
 
 (function createLines() {
   for (let i = 0; i < 14; i++) {
-    if (i % 4 === 0) {
-      let lineBreak = document.createElement("p");
-      lineBreak.classList.add("line-break");
-      sonnet.appendChild(lineBreak);
-    }
+    // li Node
     let item = document.createElement("li");
     item.classList.add("line");
     sonnet.appendChild(item);
+
     // Line Count Node
     lineNumber = Array.from(sonnet.children).filter((el) => el.tagName === "LI")
       .length;
@@ -20,13 +17,15 @@ let sonnet = document.querySelector("#sonnet");
     lineCount.classList.add("line-count")
     lineCount.textContent = lineNumber;
 
-    // Source Info and Text Nodes
+    // Text Node
     let text = document.createElement("span");
     text.classList.add("line-text");
 
+    // Source Info node
     let soureceInfo = document.createElement("span");
     soureceInfo.classList.add("source-info");
 
+    //Append all nodes
     sonnet.lastChild.appendChild(lineCount);
     sonnet.lastChild.appendChild(text);
     sonnet.lastChild.appendChild(soureceInfo);
@@ -35,13 +34,12 @@ let sonnet = document.querySelector("#sonnet");
 })();
 
 function createPoem() {
-  let sonnetLines = Array.from(sonnet.children).filter((el) => {
-    return el.tagName === "LI"; // I have those p's to add some space. Kind of a hack, really.
-  });
+  let sonnetLines = Array.from(sonnet.children);
   let linePairs = Array.from({ length: 7 }, () => getRandomInt(LINES - 1)).map(
     (el) => sourceLinePairs[el]
   );
 
+  // There's probably a cleaner/DRYer way to assign these
   sonnetLines.map((element, index) => {
     if (index % 4 < 2 && index !== 13) {
       let linePair = linePairs[Math.ceil(index / 2)];
